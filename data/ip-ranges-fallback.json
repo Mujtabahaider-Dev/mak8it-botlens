@@ -1,0 +1,90 @@
+{
+  "gptbot": {
+    "method": "json",
+    "source": "https://openai.com/gptbot.json",
+    "ranges": [
+      "132.196.86.0/24",
+      "172.182.202.0/25",
+      "172.182.204.0/24",
+      "172.182.207.0/25",
+      "172.182.214.0/24",
+      "172.182.215.0/24",
+      "20.125.66.80/28",
+      "20.171.206.0/24",
+      "20.171.207.0/24",
+      "4.227.36.0/25",
+      "52.230.152.0/24",
+      "74.7.175.128/25",
+      "74.7.227.0/25",
+      "74.7.227.128/25",
+      "74.7.228.0/25",
+      "74.7.230.0/25",
+      "74.7.241.0/25",
+      "74.7.241.128/25",
+      "74.7.242.0/25",
+      "74.7.243.128/25",
+      "74.7.244.0/25"
+    ]
+  },
+  "oai-searchbot": {
+    "method": "json",
+    "source": "https://openai.com/searchbot.json",
+    "ranges": [
+      "40.84.180.128/25"
+    ]
+  },
+  "chatgpt-user": {
+    "method": "json",
+    "source": "https://openai.com/chatgpt-user.json",
+    "ranges": [
+      "23.98.142.176/28",
+      "40.84.180.128/25"
+    ]
+  },
+  "claudebot": {
+    "method": "reverse_dns",
+    "domains": [
+      ".anthropic.com"
+    ]
+  },
+  "googlebot": {
+    "method": "reverse_dns",
+    "domains": [
+      ".googlebot.com",
+      ".google.com"
+    ]
+  },
+  "google-extended": {
+    "method": "reverse_dns",
+    "domains": [
+      ".googlebot.com",
+      ".google.com"
+    ]
+  },
+  "perplexitybot": {
+    "method": "json",
+    "source": "https://www.perplexity.ai/perplexitybot.json",
+    "ranges": [
+      "107.20.236.150/32",
+      "3.224.62.45/32",
+      "18.210.92.235/32",
+      "3.222.232.239/32",
+      "3.211.124.183/32",
+      "3.231.139.107/32",
+      "18.97.1.228/30",
+      "18.97.9.96/29"
+    ]
+  },
+  "applebot": {
+    "method": "reverse_dns",
+    "domains": [
+      ".applebot.apple.com"
+    ]
+  },
+  "ccbot": {
+    "method": "none"
+  },
+  "meta-externalagent": {
+    "method": "none"
+  }
+}
