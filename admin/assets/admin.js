@@ -11,6 +11,7 @@
 		initClearLogs();
 		initOnboardingModal();
 		initFilters();
+		initSwitchLabels();
 	});
 
 	/**
@@ -168,6 +169,21 @@
 		// Auto-submit dropdowns
 		$form.find('select').on('change', function () {
 			$form.submit();
+		});
+	}
+
+	/**
+	 * Toggle switch status label between Blocked and Allowed dynamically
+	 */
+	function initSwitchLabels() {
+		$('.mbl-bot-toggle-checkbox').on('change', function () {
+			const isChecked = $(this).is(':checked');
+			const $label = $(this).closest('.mbl-switch-container').find('.mbl-switch-status-label');
+			if (isChecked) {
+				$label.text('Blocked').css('color', 'var(--mbl-danger)');
+			} else {
+				$label.text('Allowed').css('color', 'var(--mbl-success)');
+			}
 		});
 	}
 

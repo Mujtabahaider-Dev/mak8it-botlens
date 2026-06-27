@@ -63,11 +63,16 @@ require_once MBL_PLUGIN_DIR . 'admin/views/header.php';
 							<h4 class="mbl-settings-row-title"><?php echo esc_html( $bot_name ); ?></h4>
 							<p class="mbl-settings-row-desc"><?php echo esc_html( $bot_purpose ); ?></p>
 						</div>
-						<label class="mbl-switch">
-							<input type="hidden" name="settings[block_search_bots][<?php echo esc_attr( $bot_name ); ?>]" value="0">
-							<input type="checkbox" id="mbl-bot-<?php echo esc_attr( $bot_name ); ?>" name="settings[block_search_bots][<?php echo esc_attr( $bot_name ); ?>]" value="1" <?php checked( true, $is_blocked ); ?>>
-							<span class="mbl-switch-slider"></span>
-						</label>
+						<div class="mbl-switch-container" style="display: flex; align-items: center; gap: 10px;">
+							<span class="mbl-switch-status-label" style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; min-width: 60px; text-align: right; color: <?php echo $is_blocked ? 'var(--mbl-danger)' : 'var(--mbl-success)'; ?>;">
+								<?php echo $is_blocked ? esc_html__( 'Blocked', 'mak8it-botlens' ) : esc_html__( 'Allowed', 'mak8it-botlens' ); ?>
+							</span>
+							<label class="mbl-switch">
+								<input type="hidden" name="settings[block_search_bots][<?php echo esc_attr( $bot_name ); ?>]" value="0">
+								<input type="checkbox" id="mbl-bot-<?php echo esc_attr( $bot_name ); ?>" class="mbl-bot-toggle-checkbox" name="settings[block_search_bots][<?php echo esc_attr( $bot_name ); ?>]" value="1" <?php checked( true, $is_blocked ); ?>>
+								<span class="mbl-switch-slider"></span>
+							</label>
+						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>
@@ -93,11 +98,16 @@ require_once MBL_PLUGIN_DIR . 'admin/views/header.php';
 							<h4 class="mbl-settings-row-title"><?php echo esc_html( $bot_name ); ?></h4>
 							<p class="mbl-settings-row-desc"><?php echo esc_html( $bot_purpose ); ?></p>
 						</div>
-						<label class="mbl-switch">
-							<input type="hidden" name="settings[block_training_bots][<?php echo esc_attr( $bot_name ); ?>]" value="0">
-							<input type="checkbox" id="mbl-bot-<?php echo esc_attr( $bot_name ); ?>" name="settings[block_training_bots][<?php echo esc_attr( $bot_name ); ?>]" value="1" <?php checked( true, $is_blocked ); ?>>
-							<span class="mbl-switch-slider"></span>
-						</label>
+						<div class="mbl-switch-container" style="display: flex; align-items: center; gap: 10px;">
+							<span class="mbl-switch-status-label" style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; min-width: 60px; text-align: right; color: <?php echo $is_blocked ? 'var(--mbl-danger)' : 'var(--mbl-success)'; ?>;">
+								<?php echo $is_blocked ? esc_html__( 'Blocked', 'mak8it-botlens' ) : esc_html__( 'Allowed', 'mak8it-botlens' ); ?>
+							</span>
+							<label class="mbl-switch">
+								<input type="hidden" name="settings[block_training_bots][<?php echo esc_attr( $bot_name ); ?>]" value="0">
+								<input type="checkbox" id="mbl-bot-<?php echo esc_attr( $bot_name ); ?>" class="mbl-bot-toggle-checkbox" name="settings[block_training_bots][<?php echo esc_attr( $bot_name ); ?>]" value="1" <?php checked( true, $is_blocked ); ?>>
+								<span class="mbl-switch-slider"></span>
+							</label>
+						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>

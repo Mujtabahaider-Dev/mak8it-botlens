@@ -93,7 +93,12 @@ require_once MBL_PLUGIN_DIR . 'admin/views/header.php';
 <!-- Headline -->
 <div class="mbl-headline" style="margin-bottom: 24px;">
 	<h2><?php esc_html_e( 'Crawler Logs', 'mak8it-botlens' ); ?></h2>
-	<p><?php printf( esc_html( _n( 'Review and filter history of %d crawled asset.', 'Review and filter history of %d crawled assets.', $total_records, 'mak8it-botlens' ) ), intval( $total_records ) ); ?></p>
+	<p>
+		<?php
+		/* translators: %d: number of logs */
+		printf( esc_html( _n( 'Review and filter history of %d crawled asset.', 'Review and filter history of %d crawled assets.', $total_records, 'mak8it-botlens' ) ), intval( $total_records ) );
+		?>
+	</p>
 </div>
 
 <!-- Log Filter Toolbar -->

@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Mak8it BotLens
- * Plugin URI:        https://mak8it.com
- * Description:       Monitor and control AI search crawlers on your WordPress site. Features IP-verified bot detection, llms.txt generation, and smart robots.txt control.
+ * Plugin URI:        https://mak8it.com/botlens
+ * Description:       AI crawler visibility and control for WordPress. IP-verified bot tracking, llms.txt generation, and smart robots.txt management.
  * Version:           1.0.0
  * Author:            Mak8it
  * Author URI:        https://mak8it.com
@@ -10,8 +10,8 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       mak8it-botlens
  * Domain Path:       /languages
- *
- * @package           Mak8it_BotLens
+ * Requires at least: 6.0
+ * Requires PHP:      7.4
  */
 
 defined( 'ABSPATH' ) || exit;

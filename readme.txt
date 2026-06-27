@@ -2,8 +2,9 @@
 Contributors: mak8it
 Donate link: https://mak8it.com/donate
 Tags: generative engine optimization, robots, artificial intelligence, llms sitemap, seo
-Requires at least: 5.6
+Requires at least: 6.0
 Tested up to: 7.0
+Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -47,8 +48,19 @@ This plugin performs outbound requests to sync IP registry directories. The defa
 *   openai.com/chatgpt-user.json (IP range fetch)
 *   perplexity.ai/perplexitybot.json (IP range fetch)
 
-== Dynamic IP Registry Note ==
-This plugin periodically calls external files to update known AI crawler IP ranges. The requests are cached and done in the background.
+== External Services ==
+
+This plugin periodically connects to external servers in the background to fetch and synchronize the latest verified IP directories for known AI crawlers:
+* OpenAI IP ranges: https://openai.com/gptbot.json
+* OpenAI SearchBot ranges: https://openai.com/searchbot.json
+* ChatGPT User-Agent ranges: https://openai.com/chatgpt-user.json
+* Perplexity AI ranges: https://www.perplexity.ai/perplexitybot.json
+
+== Screenshots ==
+
+1. Dashboard with AI bot request metrics and crawl log summaries.
+2. Settings screen with individual bot blocking toggles.
+3. Active logs panel displaying crawler request history with verification badges.
 
 == Changelog ==
 
